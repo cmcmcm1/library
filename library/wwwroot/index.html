@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Library</h1>
+    <h3>Add Author</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addAuthor()">
+        <input type="text" id="add-name" placeholder="name">
+        <input type="text" id="add-desc" placeholder="description">
+        <input type="submit" value="Add">
+    </form>
+    <div id="editAuthor">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateAuthor()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-desc">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">	</a>
+        </form>
+    </div>
+    <p id="counter"></p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tbody id="authors"></tbody>
+    </table>
+    <script src="js/script.js" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        getAuthors();
+    </script>
+</body>
+</html>
